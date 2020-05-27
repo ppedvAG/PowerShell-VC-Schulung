@@ -1,0 +1,1 @@
+Get-EventLog -LogName System -Newest 10 | Export-Csv -Path C:\KursHub\PowerShell-VC-Schulung\Lösungen\119-Export\Events.csv

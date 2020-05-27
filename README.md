@@ -1,2 +1,3 @@
 # PowerShell-VC-Schulung
 PowerShell Schulung der ppedv
+https://ppedv.de/schulung/kurse/WindowsPowerShellCorecmdletScriptWMIlernenFortgeschrittenWorkflowProgrammierungSeminarTraining.aspx

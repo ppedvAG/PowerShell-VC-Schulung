@@ -36,6 +36,7 @@ Param(
 [ValidateScript({Test-Connection -ComputerName $PSItem -Count 2 -Quiet})]
 [string]$ComputerName = "localhost", 
 
+
 [ValidateSet(4624,4625,4634)]
 [Parameter(Mandatory=$true)]
 [int]$EventID,
@@ -44,5 +45,6 @@ Param(
 [int]$Newest = 5
 )
 
+Write-Debug -Message "Vor Abfrage"
 Write-Verbose -Message "Folgende Werte wurden übergeben: ComputerName: $ComputerName , EventID: $EventID , Newest: $Newest"
 Get-EventLog -LogName Security -ComputerName $ComputerName | Where-Object EventID -eq $EventID | Select-Object -First $Newest

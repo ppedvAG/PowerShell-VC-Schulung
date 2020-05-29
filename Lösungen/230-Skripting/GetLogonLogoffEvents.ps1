@@ -33,11 +33,14 @@
 [cmdletBinding()]
 Param(
 
+[ValidateScript({Test-Connection -ComputerName $PSItem -Count 2 -Quiet})]
 [string]$ComputerName = "localhost", 
 
+[ValidateSet(4624,4625,4634)]
 [Parameter(Mandatory=$true)]
 [int]$EventID,
 
+[ValidateRange(5,10)]
 [int]$Newest = 5
 )
 

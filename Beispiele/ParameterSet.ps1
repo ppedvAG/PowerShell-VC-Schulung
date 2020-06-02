@@ -9,6 +9,11 @@ param(
     [ValidateRange(5,10)]
     [Parameter(ParameterSetName="Set2")]
     [int[]]$range
+    )
 
 
-)
+if($range.Length -lt 2)
+{
+    $start = $range[0]
+    $ende = $range[1]
+}
